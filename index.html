@@ -59,24 +59,25 @@
                     let winsCounter = 0;
                     let lossesCounter = 0;
                     // Create a string which will hold the number
-                    let purplePic = "";
-                    let diamondPic = "";
-                    let opalPic = "";
-                    let redPic = "";
                     let numberToMatch = "";
                     let numberSoFar = "";
                                       
                     let computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
                         $("#numberToMatch").text("Number To Match: " + computerPick);
                       
-                    var gemPick = function(){
+                    let gemPick = function(){
                     return Math.floor(Math.random() * (12-1) + 1);
                     }
 
-                    var gemArray = Array(4).fill().map(gemPick);
+                    let gemArray = Array(4).fill().map(gemPick);
                     console.log(gemArray);
 
+                    let opalPic = gemArray[0];
+                    let purplePic = gemArray[1];
+                    let diamondPic = gemArray[2];
+                    let redPic = gemArray[3];
 
+                
 
 
     //                   if (counter === targetNumber) { 
