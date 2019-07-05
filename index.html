@@ -6,6 +6,7 @@
         <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <title>Crystal Collector</title>
     </head>
 
@@ -13,32 +14,35 @@
     <body>
 
         <div class="jumbotron">
-            <h1 class="text-center" id="title">Crystal collector</h1>
+            <h1 class="text-center" id="title">CRYSTAL COLLECTOR</h1>
             <div class="text-center"></div>
        
         </div>
-        
-       
-        <div class="text-center" id="instructions">Instructions</div>
-        <div id="wins">Wins:</div>
-        <div id="losses">Losses:</div>
-        <div id="numberToMatch">Number to match</div>
-        
-        <div class="container">
+               
+        <div class="text-center bg-info" id="instructions"><strong></strong>Instructions <br> The computer will randomly choose a number between 19-120.<br>
+        Each of the 4 crystals is assigned a hidden value between 1-12.  <br> To win, you need to choose the correct combination of crystals which will equal the exact number, without going over.</strong></div>
+      
+               
+          <div class="container">
             <div class="row">
-              <div class="col-sm-3" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div> 
-               <div class="col-sm-3 img-thumbnail" id="opalPic"><img src="assets/images/opal.jpg"style="width:100%"></div>
-               <div class="col-sm-3" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
-               <div class="col-sm-3" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
+                <div class="col-sm-2" id="numberToMatch"style="width:100%">Number to Match:</div>
+               <div class="col-sm-2" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div> 
+               <div class="col-sm-2" id="emeraldPic"><img src="assets/images/emerald.jpg"style="width:100%"></div>
+               <div class="col-sm-2" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
+               <div class="col-sm-2" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
+               <div class="col-sm-2" id="numberSoFar"style="width:100%">Number So Far:</div>
             </div>
           </div>
+          
         
-       
+          <div class="container1">
+                <div class="row">
+                  <div class="col-sm-6" id="wins" style="width:100%">Wins:</div> 
+                   <div class="col-sm-6" id="losses" style="width:100%">Losses:</div>
+                   </div>
+              </div>
       
         
-        <div id="numberSoFar">Your number so far</div>
-
-
         <script type="text/javascript">
 
                 let winsCounter = document.getElementById("wins");
@@ -46,43 +50,49 @@
                 let numberToMatch = document.getElementById("numberToMatch");
                 let numberSoFar = document.getElementById("numberSoFar");
                 let diamond = document.getElementById("diamondPic");
-                let opal = document.getElementById("opalPic");
+                let opal = document.getElementById("emeraldPic");
                 let purple = document.getElementById("purplePic");
                 let red = document.getElementById("redPic");
 
                 $(document).ready(function() {
                     let winsCounter = 0;
                     let lossesCounter = 0;
+                    // Create a string which will hold the number
                     let purplePic = "";
                     let diamondPic = "";
                     let opalPic = "";
                     let redPic = "";
-                    // Create a string which will hold the number
                     let numberToMatch = "";
                     let numberSoFar = "";
+        
                     
-                            function generateRandomNumb(19, 120) {
-                return Math.floor(Math.random() * (120 - 19 + 1) + 19);
-                document.write("Number to Match: " + generateRandomNumb);               
+                    let computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                        $(computerPick).text(numberToMatch);
+                        console.log(computerPick);
+                        document.write("Number To Match: " + computerPick);
+                });
+                //     function generateRandomNumb() {
+                //     return Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                    
+                //     let generateRandomNumb = 
+                //     document.write("Number to Match: " + generateRandomNumb);               
+        
+                // console.log(numberToMatch);
+                //    }
+        //});       
+        //   <button onclick="myFunction()">Click me</button>
+        //   <p id="demo"></p>
+            //   <script>
+        //   function myFunction() {
+        //     document.getElementById("demo").innerHTML = "Hello World";
+        //   }
+        //   </script>
 
-            }
-                let numberToMatch = generateRandomNumb();
-                console.log(numberToMatch);
-
-        });     
-                   // Initial Variables
-     // var computerPick = Math.floor(Math.random() * 4) + 1;
      // var lockGame = false;
-
       // We log the computer's pick to console to make it easier to troubleshoot
 //console.log("Computer Pick: " + computerPick);
-
       // Here we create the on click event that gets the user"s pick
   //    $(".btn-choice").on("click", function() {
-
-        // Here this lockGame line prevents the user from changing the option after the game is done.
-     //   if (lockGame !== true) {
-
           // We get the value associated with the button the user picked from here
   //        var yourPick = $(this).val();
    //       console.log("Your Pick: " + yourPick);

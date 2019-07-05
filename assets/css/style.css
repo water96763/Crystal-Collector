@@ -1,16 +1,15 @@
-/* #diamondPic {
-    width: 25px;
-    height: 25px;
-} 
-#opalPic {
-    width: 25px;
-    height: 25px;
+
+#numberToMatch {
+    font-size: 20px;
+    border: red;
+    border-block: 50px;
+    
 }
-#purplePic {
-    width: 25px;
-    height: 25px;
+#numberSoFar {
+
+    font-size: 20px;
 }
-#redPic {
-    width: 25px;
-    height: 25px;
-} */
+
+.container {
+    padding-top: 25px;
+}
