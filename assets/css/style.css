@@ -1,3 +1,15 @@
-body {
-    background-image: url("../images/background.jpg");
+diamond {
+    background-image: url("diamond.jpg");
     background-size: cover; }
+
+opal {
+    background-image: url("opalwb.jpg");
+}
+
+purple {
+    background-image: url("purple.jpg");
+}
+
+red {
+    background-image: url("red.jpg")
+}
