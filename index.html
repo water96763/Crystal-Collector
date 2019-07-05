@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Crystal Collector</title>
-</head>
-<body>
-
-<h1 id="title">Crystal collector</h1>
-
-<div id="instructions">Instructions</div>
-
-<div id="wins">Wins:</div>
-<div id="losses">Losses:</div>
-<div id="numberToMatch">Number to match</div>
-
-<div id="numberSoFar">Your number so far</div>
-
-<!--<img src="diamond.jpg"-->
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=, initial-scale=1.0">-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Crystal Collector</title>
+    </head>
 
 
+    <body>
+
+        <div class="jumbotron">
+            <h1 class="text-center" id="title">Crystal collector</h1>
+            <div class="text-center"></div>
+       
+        </div>
+        
+       
+        <div class="text-center" id="instructions">Instructions</div>
+        <div id="wins">Wins:</div>
+        <div id="losses">Losses:</div>
+        <div id="numberToMatch">Number to match</div>
+        <img src="unit-4-game/assets/images/diamond.jpg)" id="diamondPic">
+        <img src="/assets/images/opalwb.jpg" id="opalPic">
+        <img src="/assets/images/purple.jpg" id="purplePic">
+        <img src="/assets/images/red.jpg" id="redPic">
+        <div id="numberSoFar">Your number so far</div>
 
 
+            <script type="text/javascript">
+
+                let winsCounter = document.getElementById("wins");
+                let lossCounter = document.getElementById("losses");
+                let numberToMatch = document.getElementById("numberToMatch");
+                let numberSoFar = document.getElementById("numberSoFar");
+                let diamond = document.getElementById("diamondPic");
+                let opal = document.getElementById("opalPic");
+                let purple = document.getElementById("purplePic");
+                let red = document.getElementById("redPic");
+
+                $(document).ready(function() {
+                    let winsCounter = 0;
+                    let lossesCounter = 0;
+                    let purplePic = "";
+                    let diamondPic = "";
+                    let opalPic = "";
+                    let redPic = "";
+                    // Create a string which will hold the number
+                    let numberToMatch = "";
+                    let numberSoFar = "";
+                    
+                    // Then initiate a loop to generate 4 separate numbers
+                    for (var i = 0; i < 3; i++) {
+
+                    // For each iteration, generate a new random number between 0 and 12.
+                    var random = Math.ceiling(Math.random() * 12);
+                    console.log(random);
+                    // ... and then dump the random number into our random-number div.
+                        $("").prepend("<br><hr>" + diamond) {
+                        };
+                        $("diamondPic").on("click", function() {
+                        };
+                        $("opalPic").on("click", function() {
+                        };
+                        $("purplePic").on("click", function() {
+                        };
+                        $("redPic").on("click", function() {
+                        }; 
+                    }:
+                };
+            </script>
 
 
-
-
-
-</body>
+    </body>
 </html>
