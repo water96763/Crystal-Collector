@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=, initial-scale=1.0">-->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
         <title>Crystal Collector</title>
     </head>
 
@@ -23,14 +23,14 @@
         <div id="wins">Wins:</div>
         <div id="losses">Losses:</div>
         <div id="numberToMatch">Number to match</div>
-        <img src="unit-4-game/assets/images/diamond.jpg)" id="diamondPic">
-        <img src="/assets/images/opalwb.jpg" id="opalPic">
-        <img src="/assets/images/purple.jpg" id="purplePic">
-        <img src="/assets/images/red.jpg" id="redPic">
+        <div id="diamondPic"><img src="assets/images/diamond.jpg"></div>
+        <div id="opalPic"><img src="assets/images/opalwb.jpg"></div>
+        <div id="purplePic"><img src="assets/images/purple.jpg"></div>
+        <div id="redPic"><img src="assets/images/red.jpg"></div>
         <div id="numberSoFar">Your number so far</div>
 
 
-            <script type="text/javascript">
+        <script type="text/javascript">
 
                 let winsCounter = document.getElementById("wins");
                 let lossCounter = document.getElementById("losses");
@@ -52,26 +52,71 @@
                     let numberToMatch = "";
                     let numberSoFar = "";
                     
+                            function generateRandomNumb(19, 120) {
+                return Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                document.write("Number to Match: " + generateRandomNumb);               
+
+            }
+                let numberToMatch = generateRandomNumb();
+                console.log(numberToMatch);
+
+        });     
+                   // Initial Variables
+     // var computerPick = Math.floor(Math.random() * 4) + 1;
+     // var lockGame = false;
+
+      // We log the computer's pick to console to make it easier to troubleshoot
+//console.log("Computer Pick: " + computerPick);
+
+      // Here we create the on click event that gets the user"s pick
+  //    $(".btn-choice").on("click", function() {
+
+        // Here this lockGame line prevents the user from changing the option after the game is done.
+     //   if (lockGame !== true) {
+
+          // We get the value associated with the button the user picked from here
+  //        var yourPick = $(this).val();
+   //       console.log("Your Pick: " + yourPick);
+
+          // We then reveal the computer's pick in the html
+  //        $("#computer-pick").text(computerPick);
+
+          // If your pick matched the computer's pick you let them know.
+  //        if (parseInt(yourPick) === computerPick) {
+  //          $("#result").text("Yep! You got it! Refresh the page to play again.");
+  //          lockGame = true;
+ 
+                 
+                 
+                 
+                 
+                 
                     // Then initiate a loop to generate 4 separate numbers
-                    for (var i = 0; i < 3; i++) {
+             //       for (var i = 0; i < 3; i++) {
 
                     // For each iteration, generate a new random number between 0 and 12.
-                    var random = Math.ceiling(Math.random() * 12);
-                    console.log(random);
+              //      var random = Math.ceiling(Math.random() * 12);
+             //       console.log(random);
+            //        };
                     // ... and then dump the random number into our random-number div.
-                        $("").prepend("<br><hr>" + diamond) {
-                        };
-                        $("diamondPic").on("click", function() {
-                        };
-                        $("opalPic").on("click", function() {
-                        };
-                        $("purplePic").on("click", function() {
-                        };
-                        $("redPic").on("click", function() {
-                        }; 
-                    }:
-                };
-            </script>
+                      //  $("").prepend("<br><hr>" + diamond) {
+                     //   };
+                    //    $("diamondPic").on("click", function() {
+
+                     //   };
+                      //  $("opalPic").on("click", function() {
+                     //   };
+                     //   $("purplePic").on("click", function() {
+                     //   };
+                     //   $("redPic").on("click", function() {
+                      //  }; 
+                   // };
+                
+       
+        
+        
+
+        </script>
 
 
     </body>
