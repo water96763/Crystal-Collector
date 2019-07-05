@@ -53,6 +53,7 @@
                 let opal = document.getElementById("emeraldPic");
                 let purple = document.getElementById("purplePic");
                 let red = document.getElementById("redPic");
+                
 
                 $(document).ready(function() {
                     let winsCounter = 0;
@@ -64,21 +65,34 @@
                     let redPic = "";
                     let numberToMatch = "";
                     let numberSoFar = "";
-        
-                    
+                                      
                     let computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-                        $(computerPick).text(numberToMatch);
-                        console.log(computerPick);
-                        document.write("Number To Match: " + computerPick);
+                        $("#numberToMatch").text("Number To Match: " + computerPick);
+                      
+                    var gemPick = function(){
+                    return Math.floor(Math.random() * (12-1) + 1);
+                    }
+
+                    var gemArray = Array(4).fill().map(gemPick);
+                    console.log(gemArray);
+
+
+
+
+    //                   if (counter === targetNumber) { 
+    //   alert("You win!");
+    // }
+
+    // else if (counter >= targetNumber) {
+    //   alert("You lose!!");
+    // }
+
                 });
-                //     function generateRandomNumb() {
-                //     return Math.floor(Math.random() * (120 - 19 + 1) + 19);
+ 
                     
                 //     let generateRandomNumb = 
-                //     document.write("Number to Match: " + generateRandomNumb);               
+                //     document.write("Number to Match: " + generateRandomNumb);   $("#number-to-guess").text(targetNumber);            
         
-                // console.log(numberToMatch);
-                //    }
         //});       
         //   <button onclick="myFunction()">Click me</button>
         //   <p id="demo"></p>
@@ -110,12 +124,7 @@
                  
                  
                  
-                    // Then initiate a loop to generate 4 separate numbers
-             //       for (var i = 0; i < 3; i++) {
-
-                    // For each iteration, generate a new random number between 0 and 12.
-              //      var random = Math.ceiling(Math.random() * 12);
-             //       console.log(random);
+        
             //        };
                     // ... and then dump the random number into our random-number div.
                       //  $("").prepend("<br><hr>" + diamond) {
