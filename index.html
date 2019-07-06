@@ -61,7 +61,14 @@
                     // Create a string which will hold the number
                     let numberToMatch = "";
                     let numberSoFar = "";
-                                      
+
+                    function resetGame() {
+                    winsCounter = "";
+                    lossesCounter = "";
+                    numberToMatch = "";
+                    }
+
+
                     let computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
                         $("#numberToMatch").text("Number To Match: " + computerPick);
                       
@@ -72,12 +79,12 @@
                     let gemArray = Array(4).fill().map(gemPick);
                     console.log(gemArray);
 
-                    let opalPic = gemArray[0];
-                    let purplePic = gemArray[1];
-                    let diamondPic = gemArray[2];
-                    let redPic = gemArray[3];
+                    let opalPic = gemArray[0]; console.log(opalPic);
+                    let purplePic = gemArray[1]; console.log(purplePic);
+                    let diamondPic = gemArray[2]; console.log(diamondPic);
+                    let redPic = gemArray[3]; console.log(redPic);
 
-                
+                if
 
 
     //                   if (counter === targetNumber) { 
@@ -90,11 +97,7 @@
 
                 });
  
-                    
-                //     let generateRandomNumb = 
-                //     document.write("Number to Match: " + generateRandomNumb);   $("#number-to-guess").text(targetNumber);            
-        
-        //});       
+         //});       
         //   <button onclick="myFunction()">Click me</button>
         //   <p id="demo"></p>
             //   <script>
