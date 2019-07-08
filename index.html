@@ -26,10 +26,10 @@
           <div class="container">
             <div class="row">
                 <div class="col-sm-2" id="numberToMatch"style="width:100%">Number to Match:</div>
-               <div class="col-sm-2" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div> 
-               <div class="col-sm-2" id="emeraldPic"><img src="assets/images/emerald.jpg"style="width:100%"></div>
-               <div class="col-sm-2" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
-               <div class="col-sm-2" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
+               <div class="col-sm-2 gem" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div> 
+               <div class="col-sm-2 gem" id="emeraldPic"><img src="assets/images/emerald.jpg"style="width:100%"></div>
+               <div class="col-sm-2 gem" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
+               <div class="col-sm-2 gem" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
                <div class="col-sm-2" id="numberSoFar"style="width:100%">Number So Far:</div>
             </div>
           </div>
@@ -68,7 +68,6 @@
                     numberToMatch = "";
                     }
 
-
                     let computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
                         $("#numberToMatch").text("Number To Match: " + computerPick);
                       
@@ -84,7 +83,15 @@
                     let diamondPic = gemArray[2]; console.log(diamondPic);
                     let redPic = gemArray[3]; console.log(redPic);
 
-                if
+                    $("diamondPick").click(function() {
+
+                    });
+
+
+
+
+               // if number chosen is greater than computer choice then end Game
+               // else add number to numberSoFar
 
 
     //                   if (counter === targetNumber) { 

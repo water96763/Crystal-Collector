@@ -1,4 +1,8 @@
 
+h1 {
+    font-family: chalkduster, cursive, trattatello, fantasy;
+}
+
 #numberToMatch {
     font-size: 20px;
     border: red;
@@ -12,4 +16,9 @@
 
 .container {
     padding-top: 25px;
+}
+
+.gem {
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(52, 92, 131, 0.5);    
 }
