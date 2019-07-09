@@ -1,13 +1,25 @@
 
-h1 {
-    font-family: chalkduster, cursive, trattatello, fantasy;
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    color: rgb(247, 245, 137);
+    font: outline, black;
 }
 
+.jumbotron {
+    border: 20px;
+    background-image: url("http://www.gamersheroes.com/wp-content/uploads/2018/10/Red-Dead-Redemption-2-The-Poisonous-Trail-Treasure-Map-Guide.jpg");
+   }
+
+#instructions {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 #numberToMatch {
     font-size: 20px;
-    border: red;
-    border-block: 50px;
-    
 }
 #numberSoFar {
     font-size: 20px;
