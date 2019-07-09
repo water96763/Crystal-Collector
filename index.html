@@ -33,12 +33,13 @@
                <div class="col-sm-2" id="numberSoFar"style="width:100%">Number So Far:</div>
             </div>
           </div>
+          <div id="computerPick"></div>
           
         
           <div class="container1">
                 <div class="row">
-                  <div class="col-sm-6" id="wins" style="width:100%">Wins:</div> 
-                   <div class="col-sm-6" id="losses" style="width:100%">Losses:</div>
+                  <div class="col-sm-6 text-center score" id="wins">Wins:</div> 
+                   <div class="col-sm-6 text-center score" id="losses">Losses:</div>
                    </div>
               </div>
       
@@ -53,115 +54,144 @@
                 let opal = document.getElementById("emeraldPic");
                 let purple = document.getElementById("purplePic");
                 let red = document.getElementById("redPic");
-                
-
-                $(document).ready(function() {
+                let computerPick = document.getElementById("computerPick");
+                              
+            $(document).ready(function() {
                     var winsCounter = 0;
-                    var lossesCounter = 0;
-                    var numberToMatch = 0;
+                    var lossCounter = 0;
                     var numberSoFar = 0;
+                    var computerPick = 0;
+               
+                            
+                    var resetGame = function() {               
 
-                    function resetGame() {
-                    winsCounter = ""
-                    lossesCounter = "";
-                    numberToMatch = 0;
-                    }
-
-                    var computerPick = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-                        $("#numberToMatch").text("Number To Match: " + computerPick);
-                      
-                    var gemPick = function(){
-                    return Math.floor(Math.random() * (12-1) + 1);
-                    }
-
-                    var gemArray = Array(4).fill().map(gemPick);
-                    console.log(gemArray);
-                   
-                    var diamondPic = gemArray[0]; console.log(diamondPic);
-                    var emeraldPic = gemArray[1]; console.log(emeraldPic);
-                    var purplePic = gemArray[2]; console.log(purplePic);
-                    var redPic = gemArray[3]; console.log(redPic);
-
-                  
-                   
-                    $("#diamondPic").click(function() {
-                        numberSoFar += diamondPic;
-                        $("#numberSoFar").text("Number So Far: " + numberSoFar);  
+                                       
                         
+                                         numberSoFar = 0;
+                                        var computerPick =Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                                                $("#numberToMatch").text("Number To Match: " + computerPick);
+                                    console.log(computerPick);
+                                       
+                                     
+                                    
+                                 
+
+                                        var gemPick = function(){
+                                            return Math.floor(Math.random() * (12-1) + 1);
+                                            }
+                                            
+
+                                            var gemArray = Array(4).fill().map(gemPick);
+                                            var diamondPic = gemArray[0]; console.log(diamondPic);
+                                            var emeraldPic = gemArray[1]; console.log(emeraldPic);
+                                            var purplePic = gemArray[2]; console.log(purplePic);
+                                            var redPic = gemArray[3]; console.log(redPic);
+                                
+                 
+
+                    $(document).on('click', "#diamondPic", function() {
+                        numberSoFar += diamondPic;
+                       
+                        $("#numberSoFar").text("Number So Far: " + numberSoFar); 
+    
+                            if(numberSoFar > computerPick) {
+                                console.log("hi");
+                                lossCounter++;
+                                $("#losses").html("Losses: " + lossCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();                                    
+                            }
+                            else if(numberSoFar === computerPick) {
+                                winsCounter++;
+                                $("#wins").html("Wins: " + winsCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0); 
+                                gemArray.length = 0;
+                                resetGame();  
+                            }                          
                     });
 
-                    $("#emeraldPic").click(function() {
+                    $(document).on('click', "#emeraldPic", function() {
                         numberSoFar += emeraldPic;
                         $("#numberSoFar").text("Number So Far: " + numberSoFar);
+
+                        if(numberSoFar > computerPick) {
+                                console.log("hi");
+                                lossCounter++;
+                                $("#losses").html("Losses: " + lossCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();                                   
+                            }
+                            else if(numberSoFar === computerPick) {
+                                winsCounter++;
+                                $("#wins").html("Wins: " + winsCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();
+                            }           
                     });
                                       
-                    $("#purplePic").click(function() {
+                    $(document).on('click', "#purplePic", function() {
                         numberSoFar += purplePic;
                         $("#numberSoFar").text("Number So Far: " + numberSoFar); 
+                        if(numberSoFar > computerPick) {
+                                console.log("hi");
+                                lossCounter++;
+                                $("#losses").html("Losses: " + lossCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();                                  
+                            }
+                            else if(numberSoFar === computerPick) {
+                                winsCounter++;
+                                $("#wins").html("Wins: " + winsCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();
+                            }           
                     });
                  
-                    $("#redPic").click(function() {
+                    $(document).on('click', "#redPic", function() {
                         numberSoFar += redPic;
                         $("#numberSoFar").text("Number So Far: " + numberSoFar);
-                    });
-
-                });
-                    
-            //         if (numberSoFar > numberToMatch) {
-            //             resetGame();
-            //             lossesCounter++;
-            //             $("#losses").html("Losses: " + lossCounter);
-            //         }
-                    
-            //         else (numbersoFar === numberToMatch) {
-            //             resetGame ();
-            //             winsCounter++;
-            //             $("#wins").html("Wins: " + winsCounter);
-            //         }
-            //    // if number chosen is greater than computer choice then end Game
-               // else add number to numberSoFar
-
-
-    //                   if (counter === targetNumber) { 
-    //   alert("You win!");
-    // }
-
-    // else if (counter >= targetNumber) {
-    //   alert("You lose!!");
-    // }
-
-               
- 
-         //});       
-        //   <button onclick="myFunction()">Click me</button>
-        //   <p id="demo"></p>
-            //   <script>
-        //   function myFunction() {
-        //     document.getElementById("demo").innerHTML = "Hello World";
-        //   }
-        //   </script>
-
-     // var lockGame = false;
-      // We log the computer's pick to console to make it easier to troubleshoot
-//console.log("Computer Pick: " + computerPick);
-      // Here we create the on click event that gets the user"s pick
-  //    $(".btn-choice").on("click", function() {
-          // We get the value associated with the button the user picked from here
-  //        var yourPick = $(this).val();
-   //       console.log("Your Pick: " + yourPick);
-
-          // We then reveal the computer's pick in the html
-  //        $("#computer-pick").text(computerPick);
-
-          // If your pick matched the computer's pick you let them know.
-  //        if (parseInt(yourPick) === computerPick) {
-  //          $("#result").text("Yep! You got it! Refresh the page to play again.");
-  //          lockGame = true;
- 
-                 
-                 
-
+                        if(numberSoFar > computerPick) {
+                                console.log("hi");
+                                lossCounter++;
+                                $("#losses").html("Losses: " + lossCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame();                                  
+                            }
+                            else if(numberSoFar === computerPick) {
+                                winsCounter++;
+                                $("#wins").html("Wins: " + winsCounter);
+                                $("#numberSoFar").text("Number So Far: " + 0);
+                                gemArray.length = 0;
+                                resetGame(); 
+                            }           
+                              });
+                            } 
+                    resetGame();           
+            });
+                  
+              
+                //     if(numberSoFar >= numberToMatch) {
+                //    console.log("hi");
+                //         lossCounter++;
         
+                //         $("#losses").html("Losses: " ,lossCounter);
+                //     }
+                    
+                //     else if(numberSoFar === numberToMatch) {
+                   
+                //         winsCounter++;
+               
+                //         $("#wins").html("Wins: " + winsCounter);
+                //     }
+                 
+            // // //    // if number chosen is greater than computer choice then end Game
+
 
         </script>
 

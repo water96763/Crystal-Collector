@@ -10,7 +10,6 @@ h1 {
     
 }
 #numberSoFar {
-
     font-size: 20px;
 }
 
@@ -18,7 +17,17 @@ h1 {
     padding-top: 25px;
 }
 
+.container1 {
+    border-top: 20px;
+    padding-top: 30px;
+}
+
 .gem {
     border-radius: 4px;
     box-shadow: 5px 5px 5px rgba(52, 92, 131, 0.5);    
+}
+
+.score {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
