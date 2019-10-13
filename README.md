@@ -1,4 +1,4 @@
-# unit-4-game
+# Crystal Collector
 
 ![Image of screen](assets/images/IMG_8261(1).jpg)
 This is a crystal collector game.  In this game, the computer chooses a number from 1-12 for each of 4 crystals.
