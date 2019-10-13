@@ -43,3 +43,155 @@ p {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
+@media screen and (max-width: 768px){
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100px;
+        font-weight: bolder;
+        color: rgb(247, 245, 137);
+        font: outline, black;
+    }
+    
+    .jumbotron {
+       width: 100%;
+        background-image: url("http://www.gamersheroes.com/wp-content/uploads/2018/10/Red-Dead-Redemption-2-The-Poisonous-Trail-Treasure-Map-Guide.jpg");
+       }
+    #title {
+        font-size: 30px;
+    }
+    
+    #instructions {
+        font-size: 20px;
+        font-weight: bolder;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #numberToMatch {
+        font-size: 20px;
+    }
+    #numberSoFar {
+        font-size: 20px;
+    }
+    
+    .container {
+        padding-top: 25px;
+    }
+    
+    .container1 {
+        border-top: 20px;
+        padding-top: 30px;
+    }
+    
+    .gem {
+        border-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(52, 92, 131, 0.5); 
+        width: 25%;   
+    }
+    
+    .score {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}  
+@media screen and (max-width: 320px){
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100px;
+        font-weight: bolder;
+        color: rgb(247, 245, 137);
+        font: outline, black;
+    }
+    
+    .jumbotron {
+       width: 100%;
+        background-image: url("http://www.gamersheroes.com/wp-content/uploads/2018/10/Red-Dead-Redemption-2-The-Poisonous-Trail-Treasure-Map-Guide.jpg");
+       }
+    #title {
+        font-size: 30px;
+    }
+    
+    #instructions {
+        font-size: 10px;
+        font-weight: bolder;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #numberToMatch {
+        font-size: 10px;
+    }
+    #numberSoFar {
+        font-size: 10px;
+    }
+    
+    .container {
+        padding-top: 5px;
+    }
+    
+    .container1 {
+        border-top: 5px;
+        padding-top: 30px;
+    }
+    
+    .gem {
+        border-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(52, 92, 131, 0.5); 
+        width: 25%;   
+    }
+    
+    .score {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+/* Width at 168px and below */
+@media screen and (max-width: 168px) and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {  
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-weight: bolder;
+        color: rgb(247, 245, 137);
+        font: outline, black;
+    }
+    
+    .jumbotron {
+       width: auto;
+        background-image: none;
+    }
+    #title {
+        font-size: 10px;
+        text-align: center;
+    }
+        #instructions {
+        font-size: 10px;
+        font-weight: bolder;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #numberToMatch {
+        font-size: 10px;
+    }
+    #numberSoFar {
+        font-size: 10px;
+    }
+    
+    .container {
+        padding-top: 5px;
+    }
+    
+    .container1 {
+        border-top: 5px;
+        padding-top: 30px;
+    }
+    
+    .gem {
+        border-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(52, 92, 131, 0.5); 
+        width: 25%;   
+    }
+    
+    .score {
+        font-size: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+    }    
+}
