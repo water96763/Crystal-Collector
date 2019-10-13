@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <title>Crystal Collector</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Crystal Collector</title>
+</head>
 
-        <div class="jumbotron">
-            <p class="text-center" id="title">CRYSTAL COLLECTOR</p>
-        </div>
-               
-        <div class="text-center" id="instructions"><strong></strong>Instructions <br> The computer will randomly choose a number between 19-120.<br>
-        Each of the 4 crystals is assigned a hidden value between 1-12.  <br> To win, you need to choose the correct combination of crystals which will equal the exact number, without going over.</strong>
-        </div>
-             
-        <div class="container">
-            <div class="row">
-               <div class="col-sm-2" id="numberToMatch"style="width:100%">Number to Match:</div>
-               <div class="col-sm-2 gem" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div> 
-               <div class="col-sm-2 gem" id="emeraldPic"><img src="assets/images/emerald.jpg"style="width:100%"></div>
-               <div class="col-sm-2 gem" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
-               <div class="col-sm-2 gem" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
-               <div class="col-sm-2" id="numberSoFar"style="width:100%">Number So Far:</div>
-            </div>
-          </div>
-          
-        <div id="computerPick"></div>
-          
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-6 text-center score" id="wins">Wins:</div> 
-                <div class="col-sm-6 text-center score" id="losses">Losses:</div>
-            </div>
-        </div>
-      
-       <script src="assets/javascript/game.js"></script> 
+<body>
 
-    </body>
+    <div class="jumbotron">
+        <p class="text-center" id="title">CRYSTAL COLLECTOR</p>
+    </div>
+
+    <div class="text-center" id="instructions"><strong></strong>Instructions <br> The computer will randomly choose a
+        number between 19-120.<br>
+        Each of the 4 crystals is assigned a hidden value between 1-12. <br> To win, you need to choose the correct
+        combination of crystals which will equal the exact number, without going over.</strong>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2" id="numberToMatch" style="width:100%">Number to Match:</div>
+            <div class="col-sm-2 gem" id="diamondPic"><img src="assets/images/diamond.jpg" style="width:100%"></div>
+            <div class="col-sm-2 gem" id="emeraldPic"><img src="assets/images/emerald.jpg" style="width:100%"></div>
+            <div class="col-sm-2 gem" id="purplePic"><img src="assets/images/purple.jpg" style="width:100%"></div>
+            <div class="col-sm-2 gem" id="redPic"><img src="assets/images/red.jpg" style="width:100%"></div>
+            <div class="col-sm-2" id="numberSoFar" style="width:100%">Number So Far:</div>
+        </div>
+    </div>
+
+    <div id="computerPick"></div>
+
+    <div class="container1">
+        <div class="row">
+            <div class="col-sm-6 text-center score" id="wins">Wins:</div>
+            <div class="col-sm-6 text-center score" id="losses">Losses:</div>
+        </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
 </html>
